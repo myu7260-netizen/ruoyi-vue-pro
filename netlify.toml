@@ -1,0 +1,17 @@
+[build]
+  base = "yudao-ui/yudao-ui-admin-vue3"
+  command = "npm ci && npm run build:prod"
+  publish = "dist"
+
+# Vue history 路由回退
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# （可选）把 /admin-api 代理到你的后端
+# [[redirects]]
+#   from = "/admin-api/*"
+#   to = "http://YOUR-BACKEND:48080/admin-api/:splat"
+#   status = 200
+#   force = true
